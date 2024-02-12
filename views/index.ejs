@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+<body>
+    <div class="messages-content">
+        <h2>Message Board</h2>
+
+        <% if (messages.length > 0) { %>
+            <% messages.forEach(message => { %>
+                <h3 class="user"><%= message.user %></h3>
+                <p class="message"><%= message.text %></p>
+                <p class="timestamp"><%= message.added %></p>
+            <% }) %>
+        <% } else { %>
+            <p>There are no messages to display :/ (Try adding one?)</p>
+        <% } %>
+    </div>
+        
+</body>
+<%- include('./partials/footer.ejs') %>
+</html>
