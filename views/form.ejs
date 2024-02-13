@@ -1,4 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs') %>
+<body>
+    <div class="form">
+        <form method="POST" action="/new">
+            <h2>Add a new message:</h2>
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author" required>
+            <label for="message" id="message" name="message" required>Message:</label>
+            <input type="text" name="message" id="message" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
 </html>
