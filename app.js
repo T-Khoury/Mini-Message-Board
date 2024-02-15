@@ -8,7 +8,7 @@ const app = express();
 
 // connect to mongodb
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000)
 // register view engine
 app.set('view engine', 'ejs');
 
